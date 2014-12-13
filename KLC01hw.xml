@@ -1,28 +1,27 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="oled_cleardisplay" id="1" x="1" y="1">
+  <block type="oled_cleardisplay" id="1" x="-20" y="-11">
     <next>
-      <block type="variables_set" id="155" inline="true">
-        <field name="VAR">i</field>
-        <value name="VALUE">
-          <block type="math_number" id="190">
-            <field name="NUM">0</field>
+      <block type="oled_setcursor" id="2" inline="true">
+        <value name="STARTX">
+          <block type="math_number" id="3">
+            <field name="NUM">25</field>
+          </block>
+        </value>
+        <value name="STARTY">
+          <block type="math_number" id="4">
+            <field name="NUM">25</field>
           </block>
         </value>
         <next>
-          <block type="oled_setcursor" id="2" inline="true">
-            <value name="STARTX">
-              <block type="math_number" id="3">
-                <field name="NUM">10</field>
-              </block>
-            </value>
-            <value name="STARTY">
-              <block type="math_number" id="4">
-                <field name="NUM">10</field>
-              </block>
-            </value>
+          <block type="oled_drawtext" id="5">
+            <field name="TEXT">Self Destruct In...</field>
             <next>
-              <block type="oled_drawtext" id="5">
-                <field name="TEXT">Self Destruct In...</field>
+              <block type="robot_delay" id="473" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="474">
+                    <field name="NUM">1000</field>
+                  </block>
+                </value>
                 <next>
                   <block type="oled_cleardisplay" id="78">
                     <next>
